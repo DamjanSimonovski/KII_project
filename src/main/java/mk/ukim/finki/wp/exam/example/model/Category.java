@@ -1,7 +1,16 @@
 package mk.ukim.finki.wp.exam.example.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+
+@Entity
 public class Category {
 
+    @Id
+    @GeneratedValue
     private Long id;
 
     private String name;
@@ -21,4 +30,11 @@ public class Category {
     public void setName(String name) {
         this.name = name;
     }
+
+    public Category(){}
+
+    public Category(String name) {
+        this.name = name;
+    }
+
 }
